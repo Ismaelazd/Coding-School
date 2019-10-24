@@ -1,0 +1,206 @@
+nav div ul li {
+    position: relative;
+    width: max-content;
+    padding-bottom: 10px;
+}
+
+nav div ul li::before,
+nav div ul li::after {
+    content: "";
+    background-color: rgb(206, 51, 193);
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    width: 0;
+
+}
+
+nav div ul li:hover::before {
+    width: 50%;
+    left: 50%;
+    transition: width 0.5s ease-in-out;
+
+
+}
+
+
+nav div ul li:hover::after {
+    width: 50%;
+    right: 50%;
+    transition: width 0.5s ease-in-out;
+}
+
+
+#bounce-title {
+
+    text-align: right;
+    animation: mybounce 0.5s infinite alternate;
+    animation-delay: 1s;
+
+
+}
+
+@keyframes mybounce {
+    from {
+        transform: translateY(0) scaleY(0.5);
+    }
+
+    to {
+        transform: translateY(-100px) scaleY(2);
+    }
+}
+
+
+
+/** BONUS **/
+
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+
+}
+
+.btn:hover::before {
+    animation: logoicon 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes logoicon {
+    0% {
+        left: -110%;
+        top: 90%
+    }
+
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+
+    100% {
+        left: -10%;
+        top: -10%
+    }
+}
+
+
+ /** BONUS 2 **/
+
+ .social-btn a::before{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(45deg,#22a6b3,#30336b);
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.3s ease-in;
+    
+}
+
+.social-btn a:hover::before{
+    transform: scale(0);
+}
+
+/** BONUS 3**/
+
+.box .icon h4::before,
+.box .icon h3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #00bcd4;
+    transition: 1s;
+}
+
+.box .icon h4::before{
+    left: inherit;
+    right: 100%;
+    background: #9c27b0;
+}
+
+.box .fa:hover ~ h4::before{
+    left: initial;
+    right: -100%;
+
+}
+
+.box .fa:hover ~ h3::before{
+    left: -100%;
+}
+
+/** BONUS 4 **/
+
+h1 span{
+    display: table-cell; 
+    margin: 0;
+    padding: 0;
+    
+    animation: title 2s linear infinite;
+ 
+ }
+
+ @keyframes title{
+     0%,100%{
+        color: #9c27b0;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff,
+                    0 0 80px #00b3ff,
+                    0 0 120px #00b3ff,
+                    0 0 300px #00b3ff,
+                    0 0 400px #00b3ff;
+     }
+     5%,95%{
+         color: #111;
+         filter: blur(0px);
+         text-shadow:  none;
+     }
+}
+
+h1 span:nth-child(1){
+    animation-delay: 0s ;
+}
+
+h1 span:nth-child(2){
+    animation-delay:0.25s ;
+}
+
+h1 span:nth-child(3){
+    animation-delay:0.5s ;
+}
+
+h1 span:nth-child(4){
+    animation-delay:0.75s ;
+}
+
+h1 span:nth-child(5){
+    animation-delay:1s ;
+}
+
+h1 span:nth-child(6){
+    animation-delay: 1.25s;
+}
+
+h1 span:nth-child(7){
+    animation-delay: 1.5s;
+}
+
+h1 span:nth-child(8){
+    animation-delay:1.75s ;
+}
+
+h1 span:nth-child(9){
+    animation-delay: 2s;
+}

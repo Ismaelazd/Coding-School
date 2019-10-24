@@ -1,0 +1,40 @@
+div {
+  animation: mymove 2s infinite;
+  animation-delay: 1s;
+}
+
+div:hover{
+  -webkit-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+  -o-animation-play-state:paused;
+  animation-play-state:paused;
+  cursor: pointer;
+}
+
+
+@keyframes mymove {
+  0%   { left: 0px; top: 0px;}
+  25%  { left: 200px; top: 0px;}
+  50%  { left: 200px; top: 200px;}
+  75%  { left: 0px; top: 200px;}
+  100% {left: 0px; top: 0px;}
+}
+
+
+
+
+
+#bounce-title{
+ 
+  text-align: right;
+  animation: mybounce 0.5s infinite alternate ;
+  animation-delay: 1s;
+
+
+}
+
+@keyframes mybounce {
+  from {transform: translateY(0) scaleY(0.5);}
+  to   {transform: translateY(-800px) scaleY(2);
+  }
+}

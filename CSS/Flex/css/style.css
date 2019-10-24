@@ -1,0 +1,60 @@
+body{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: blue;
+    height: 80px;
+    border: solid 1 px blue;
+    border-radius: 10px;
+
+
+}
+
+.container {
+    display: flex;
+    flex: 8;
+    
+
+}
+
+
+nav {
+    background-color: coral;
+    order: -1;
+    flex: 2;
+    margin:4px;
+    border-radius: 10px;
+    
+}
+
+
+
+article {
+    background-color: cadetblue;
+    width: 100px;
+    flex: 8;
+    margin:4px;
+    border-radius: 10px;
+
+}
+
+
+
+aside {
+    background-color: coral;
+    flex: 2;
+    margin:4px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: blue;
+    height: 80px;
+    border: solid 1 px blue;
+    border-radius: 10px;
+    align-items: flex-end;
+
+}

@@ -1,0 +1,17 @@
+#un {
+    color: aqua;
+    color: red;
+}
+
+
+.rouge div > p{
+    color: red;
+} 
+ .rouge > p{
+     color: blue;
+ }
+
+ input:focus{
+     border: 20px solid blue;
+     padding: 30px;
+ }
